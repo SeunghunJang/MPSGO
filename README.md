@@ -9,4 +9,4 @@
  <code style="color : red">text</code>
  
  $${\color{red}The collected NIST dataset will be available for appropriate requests.}$$
- <code style="color : red">The collected NIST dataset will be available for appropriate requests.</code>
+ <code style" color: red">The collected NIST dataset will be available for appropriate requests.</code>
