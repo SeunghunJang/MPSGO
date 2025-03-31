@@ -1,0 +1,10 @@
+! B3LYP D3BJ def2-SVP TightSCF XTB Opt PAL8
+
+%geom
+  MaxIter 3000
+end
+
+* xyzfile 0 1 mol.xyz
+
+%pal nprocs 4 # any number (positive integer)
+end
