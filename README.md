@@ -1,9 +1,13 @@
-## Deep Learning for Generating Phase-Conditioned Infrared Spectra
+## Python framework for molecular pair structure generation and optimization
 
-Infrared (IR) spectroscopy is an efficient method for identifying unknown chemical compounds. To accelerate the chemical analysis of IR spectra, various calculation and machine learning methods for simulating IR spectra of molecules have been studied in chemical science. However, existing calculation and machine learning methods assumed a rigid constraint that all molecules are in the gas phase, i.e., they overlooked the phase dependency of the IR spectra. In this paper, we propose an efficient phase-aware machine learning method to generate phase-conditioned IR spectra from 2D molecular structures. To this end, we devised a phase-aware graph neural network and combined it with a transformer decoder. To the best of our knowledge, the proposed method is the first IR spectrum generator to generate the phase-conditioned IR spectra of real-world complex molecules. The proposed method outperformed state-of-the-art methods in the tasks of generating IR spectra on a benchmark dataset containing experimentally measured 11,546 IR spectra of 10,288 unique molecules.
+Since chemical reactions essentially originate from molecular interactions, understanding molecular interactions beyond the properties of a single molecule is critical for the comprehensive investigation of real-world chemical experiments. However, quantum chemical calculation methods for molecule-molecule interaction need to consider extensive spatial configurations to find the optimal configuration. For this reason, a publicly available large database of molecular interaction results has not yet been established. Here, we devised an efficient and systematic framework for generating initial configurations of molecular interaction systems. Based on our framework, we constructed molecular interaction databases containing 49,620 individual molecules and 247,741 molecular interaction systems for chromophore-solvent, solute-solvent, and drug-drug molecular interactions. Our databases can be used for theoretical analysis and data-driven modeling of chemical reaction results, such as product property prediction and machine learning force fields. The molecular interaction databases will accelerate data-driven study in various research fields of chemical science.
 
 ## Run
-- exec.py: A python script to optimize model parameters of PASGeN on the NIST dataset.
+- exec_smiles2xyz.py: A python script to convert smiles string in an Excel file to an xyz file.
+- exec_xyz2molecular_pair.py: A python script to generate molecule pair structures using xyz files for individual molecules.
+- exec_dft.py: A python script for performing bulk quantum chemical calculations on the generated molecular pair structures.
+- exec_extract_rlxed_xyz.py: A python script to extract optimized molecular structure information from quantum chemistry calculation results and then to generate xyz files.
+- exec_extract_property.py: A python script to extract quantum chemical property values ​​for optimized molecular structures from quantum chemical calculation results.
 
 ## Datasets
-<code style="color : red">The collected NIST dataset will be available for appropriate requests.</code>
+<code style="color : red">An Excel file in xlsx format containing smile string information, but the headname of the column containing the smile string information must be "SMILES_1" and "SMILES_2".</code>
