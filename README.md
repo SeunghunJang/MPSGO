@@ -10,4 +10,4 @@ Since chemical reactions essentially originate from molecular interactions, unde
 - exec_extract_property.py: A python script to extract quantum chemical property values ​​for optimized molecular structures from quantum chemical calculation results.
 
 ## Datasets
-<code style="color : red">An Excel file in xlsx format containing smile string information, but the headname of the column containing the smile string information must be "SMILES_1" and "SMILES_2".</code>
+<code style=" color: red">Any Excel file in xlsx format containing smile string information is available, but the headname of the column containing the smile string information must be "SMILES_1" and "SMILES_2".</code>
